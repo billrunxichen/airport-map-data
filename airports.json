@@ -1,1 +1,182 @@
-[]
+[
+  {
+    "code": "SGR",
+    "name": "Sugarland Airport",
+    "address": "12888 S Texas 6, Sugar Land, TX 77498",
+    "lat": "29.6224",
+    "lng": "-95.6565",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Sugar-Land-Regional-Airport-(SGR).aspx?csf=1&web=1&share=EdPzv_n12nVKnb16YB-L8tEBhlQb-epKP74zNEKgNugKhw&e=kWfwVW",
+    "__PowerAppsId__": "8fedf8edbe894c1c86ca979aed3280f6"
+  },
+  {
+    "code": "OPF",
+    "name": "Opa Locka Airport",
+    "address": "14201 NW 42nd Ave, Opa-locka, FL 33054",
+    "lat": "25.907",
+    "lng": "-80.2782",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Miami-Opa-Locka-Executive-Airport-(OPF).aspx?csf=1&web=1&share=ERtTryUVhC1LoOjubbFMnnwBWggg9beyIjSNEd7HfAbTCg&e=UJBTm7",
+    "__PowerAppsId__": "85c31662702d4453b44bc44f79b0fe3c"
+  },
+  {
+    "code": "BNA",
+    "name": "Nashville Airport",
+    "address": "1 Terminal Dr, Nashville, TN 37214",
+    "lat": "36.1263",
+    "lng": "-86.6774",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Nashville-International-Airport-(BNA).aspx?csf=1&web=1&share=EZdU32SMCj5MvN8TXM_-cFcBXtFYkH3OLMMutJWOsfG_sg&e=fgrvia",
+    "__PowerAppsId__": "feb7db1887cc4a5f9d22b1b03ac80bb1"
+  },
+  {
+    "code": "DVT",
+    "name": "Deer Valley Airport",
+    "address": "702 W Deer Valley Rd, Phoenix, AZ 85027",
+    "lat": "33.6883",
+    "lng": "-112.083",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Deer-Valley-Airport-(DVT).aspx?csf=1&web=1&share=ESNMW6Xr4xlMtM5km3usm5EBzk2fpHBSTiwtyQZwBhEAPw&e=daF0CG",
+    "__PowerAppsId__": "09f447fc315e44dcb2901a381b789f02"
+  },
+  {
+    "code": "SJC",
+    "name": "San Jose Airport",
+    "address": "1701 Airport Blvd Ste B-1130, San Jose, CA 95110",
+    "lat": "37.3626",
+    "lng": "-121.929",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/San-Jose-International-Airport.aspx?csf=1&web=1&share=EWXsus80JwRJpNbdPh1KlsEB6j_NjzBaOPJqNYyntBrILQ&e=6Uw3kK",
+    "__PowerAppsId__": "c03ea9de55254cfd8425eba40aac6f0e"
+  },
+  {
+    "code": "CMA",
+    "name": "Camarillo Airport",
+    "address": "555 Airport Way, Camarillo, CA 93010",
+    "lat": "34.2139",
+    "lng": "-119.0944",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Camarillo-Airport-(CMA).aspx?csf=1&web=1&share=Ee-ETAyjRvRDtY6wWLD3qcoBIr7DtPeBLn4lsAcX8M5I2Q&e=0Wsduq",
+    "__PowerAppsId__": "dae5e2bcf96d4f02b93b23bfb42a7be5"
+  },
+  {
+    "code": "ADS",
+    "name": "Addison Airport",
+    "address": "4545 Jimmy Doolittle Dr, Addison, TX 75001",
+    "lat": "32.9686",
+    "lng": "-96.8365",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Addison-Airport-(ADS).aspx?csf=1&web=1&share=EY_daPIqWllJqngKPMqVB1QBdLl7dJhHoN5c_ctvrCa2tQ&e=8N6bvr",
+    "__PowerAppsId__": "d6b8c627efc64ef4999828ca8bf757d2"
+  },
+  {
+    "code": "BFI",
+    "name": "King County Airport",
+    "address": "7277 Perimeter Rd S, Seattle, WA 98108",
+    "lat": "47.53",
+    "lng": "-122.3024",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/BFI--.aspx?csf=1&web=1&share=ERZwJt1IqMpKsI2JdlmLcxYBmO6StkBnKETdvS1j_bSvUw&e=Xk9F2Z",
+    "__PowerAppsId__": "b733f6bd286d49dab8f956b76996ee8b"
+  },
+  {
+    "code": "APA",
+    "name": "Centennial Airport",
+    "address": "8500 Pe\u00f1a Blvd, Denver, CO 80249",
+    "lat": "39.8617",
+    "lng": "-104.6731",
+    "status": "In Operation",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/EY13vGdbFVZMoF6lvAlgyBYByU41QObdUdv6hfrKC7HMKA?e=FE1tSm",
+    "__PowerAppsId__": "8c419f1c5f2c492881cbe97112c14746"
+  },
+  {
+    "code": "HIO",
+    "name": "Hillsboro Airport",
+    "address": "3355 NE Cornell Rd, Hillsboro, OR 97124",
+    "lat": "45.5404",
+    "lng": "-122.9496",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Hillsboro-Airport-(HIO).aspx?csf=1&web=1&share=EZy5wZGwlyZMlBpSZW7cXUwBGVOPp99_bjlpmhn7avkl6A&e=dpmtvj",
+    "__PowerAppsId__": "dd0ebc2cd6ed457d87b543613d868765"
+  },
+  {
+    "code": "SLC",
+    "name": "Salt Lake City International Airport ",
+    "address": "W Terminal Dr, Salt Lake City, UT 84122",
+    "lat": "40.7899",
+    "lng": "-111.9791",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/ESBT1Hd3Zk5Ht9Hp4lm7ZTIB086BA0an_MUhd04cYfBQaw?e=ijUuHp",
+    "__PowerAppsId__": "a79d4300409c47dfae5b59b3693965ee"
+  },
+  {
+    "code": "PWK",
+    "name": "Chicago Executive Airport",
+    "address": "1020 Plant Rd, Wheeling, IL 60090",
+    "lat": "42.1142",
+    "lng": "-87.9015",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/EZr9sftGc4xOg18s0SkehJgBrl-sNhIhllogzB2FjkpZRA?e=drVn0f",
+    "__PowerAppsId__": "b42bf78b8b9e4b618ac958c894d1ad21"
+  },
+  {
+    "code": "IAD",
+    "name": "Dulles International Airport",
+    "address": "1 Saarinen Cir, Dulles, VA 20166",
+    "lat": "38.9531",
+    "lng": "-77.4565",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/EVObGsghud9Ki9I6ZgXMIo8BZQwxNo8tLK14VWAV4FrViA?e=3TSXnB",
+    "__PowerAppsId__": "4435d01e6d7741f59c5870bb3f90b6a0"
+  },
+  {
+    "code": "TTN",
+    "name": " Trenton-Mercer Airport",
+    "address": "1100 Terminal Cir Dr, Ewing Township, NJ 08628",
+    "lat": "40.2767",
+    "lng": "-74.8135",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/EfnhyUno5ktIl70jmsJ8DBYB8EOuiceYDkh4L7dA_RxCdw?e=yLgdVj",
+    "__PowerAppsId__": "e0c457bc477f402585cbb5779f087ac9"
+  },
+  {
+    "code": "BDL",
+    "name": "Bradley International Airport",
+    "address": "Schoephoester Rd, Windsor Locks, CT 06096",
+    "lat": "41.9389",
+    "lng": "-72.6832",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/Ecm1Mc_Dcw5KuukE0aaAcOYBZEQmimBd9DzWQSsRIIVYtQ?e=uL6OyV",
+    "__PowerAppsId__": "2c99cf17fe3144df9ee6474eb3b9fd33"
+  },
+  {
+    "code": "ORL",
+    "name": "Orlando Executive Airport",
+    "address": "365 Rickenbacker Dr, Orlando, FL 32803",
+    "lat": "28.5455",
+    "lng": "-81.333",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/Ed11fStr4alMrzxdaT8PGuMBtZHHmAYbuRE8_v-ZSyvN3Q?e=Tfq8HN",
+    "__PowerAppsId__": "d9b1520da0684ecc9d7122f99ad8d3e9"
+  },
+  {
+    "code": "SWF",
+    "name": "New York Stewart International Airport",
+    "address": "1180 1st St, New Windsor, NY 12553",
+    "lat": "41.5041",
+    "lng": "-74.1048",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/g/Eek4cgScxY1BujfoiAjd-3AB6PzUTPhJOpQ1kf65CgO1Zw?e=2cRpe1",
+    "__PowerAppsId__": "146d5172135b4c54a00daca752c0244c"
+  },
+  {
+    "code": "POU",
+    "name": "Hudson Valley Regional Airport ",
+    "address": "263 New Hackensack Rd, Wappingers Falls, NY 12590",
+    "lat": "41.6266",
+    "lng": "-73.8841",
+    "status": "In Development",
+    "url": "https://skyharbour.sharepoint.com/:u:/r/SitePages/Hudson-Valley-Regional-Airport-(POU).aspx?csf=1&web=1&share=EXGLu56bZVFNlOEFFYF8WfIB_BeOlJtBPcaWANyXBHl3NA&e=Zyn2P2",
+    "__PowerAppsId__": "58f3025a53f047f197b464005e14cbce"
+  }
+]
