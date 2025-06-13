@@ -16,8 +16,7 @@ jobs:
         run: |
           curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
           mkdir -p json
-          echo '
-import csv, json
+          echo 'import csv, json
 with open("data.csv") as f:
     reader = csv.DictReader(f)
     rows = list(reader)
