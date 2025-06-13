@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -16,14 +15,14 @@ jobs:
       - name: Fetch Google Sheet and convert to JSON
         run: |
           curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
-          python3 <<EOF
-import csv, json
+          mkdir -p json
+          echo "import csv, json
 with open('data.csv') as f:
     reader = csv.DictReader(f)
     rows = list(reader)
 with open('airports.json', 'w') as f:
-    json.dump(rows, f, indent=2)
-EOF
+    json.dump(rows, f, indent=2)" > convert.py
+          python3 convert.py
 
       - name: Commit and push
         run: |
