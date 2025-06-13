@@ -15,12 +15,12 @@ jobs:
       - name: Fetch Google Sheet and convert to JSON
         run: |
           curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
-          mkdir -p json
+          mkdir -p docs
           echo "import csv, json" > convert.py
           echo "with open('data.csv') as f:" >> convert.py
           echo "    reader = csv.DictReader(f)" >> convert.py
           echo "    rows = list(reader)" >> convert.py
-          echo "with open('airports.json', 'w') as f:" >> convert.py
+          echo "with open('docs/airports.json', 'w') as f:" >> convert.py
           echo "    json.dump(rows, f, indent=2)" >> convert.py
           python3 convert.py
 
@@ -28,6 +28,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add airports.json
+          git add docs/airports.json
           git commit -m "Update airports.json from Google Sheet" || echo "No changes to commit"
           git push
