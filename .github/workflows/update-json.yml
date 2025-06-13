@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0             # Needed for git push to work properly
 
       - name: Download Google Sheet as CSV
-        run: curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/export?format=csv" -o data.csv
+        run: curl -L "https://docs.google.com/spreadsheets/d/1_C3dll17AdGDFNAzdtCJZgRsf_EaII_x827SggrRmoA/export?format=csv" -o data.csv
 
 
       - name: Convert CSV to JSON
