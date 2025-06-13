@@ -25,10 +25,14 @@ jobs:
           echo '    json.dump(rows, f, indent=2)' >> convert.py
           python3 convert.py
 
+      - name: Add .nojekyll to bypass Jekyll processing
+        run: touch .nojekyll
+
       - name: Commit and push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add airports.json
+          git add airports.json .nojekyll
           git commit -m "Update airports.json" || echo "No changes"
           git push
+
