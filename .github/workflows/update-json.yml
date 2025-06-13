@@ -24,6 +24,7 @@ jobs:
           echo "    json.dump(rows, f, indent=2)" >> convert.py
           python3 convert.py
 
+
       - name: Commit and push
         run: |
           git config user.name github-actions
