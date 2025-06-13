@@ -16,7 +16,7 @@ jobs:
           persist-credentials: true  # Necessary to push back to repo
           fetch-depth: 0             # Needed for git push to work properly
 
-      - name: Download G- name: Download Google Sheet as CSV
+      - name: Download Google Sheet as CSV
         run: curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/export?format=csv" -o data.csv
 
 
