@@ -3,22 +3,22 @@ name: Update JSON
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"  # every 30 minutes
+    - cron: "*/30 * * * *"
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repo
+      - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # Necessary to push back to repo
-          fetch-depth: 0             # Needed for git push to work properly
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Download Google Sheet as CSV
-        run: curl -L "https://docs.google.com/spreadsheets/d/1_C3dll17AdGDFNAzdtCJZgRsf_EaII_x827SggrRmoA/export?format=csv" -o data.csv
-
+        run: |
+          curl -L "https://docs.google.com/spreadsheets/d/1_C3dll17AdGDFNAzdtCJZgRsf_EaII_x827SggrRmoA/export?format=csv" -o data.csv
 
       - name: Convert CSV to JSON
         run: |
@@ -30,11 +30,11 @@ jobs:
           echo '    json.dump(rows, f, indent=2)' >> convert.py
           python3 convert.py
 
-    - name: Commit and push
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add airports.json
-        git commit -m "Update airports.json" || echo "No changes"
-        git push --force
-
+      - name: Commit and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull --rebase
+          git add airports.json
+          git commit -m "Update airports.json" || echo "No changes"
+          git push
