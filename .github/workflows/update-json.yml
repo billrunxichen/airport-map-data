@@ -2,7 +2,7 @@ name: Update airports.json
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  # Every 30 minutes
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,27 +10,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download Google Sheet CSV
+      - name: Download Google Sheet as CSV
         run: |
           curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
 
       - name: Convert CSV to JSON
         run: |
-          echo "import csv, json" > convert.py
-          echo "with open('data.csv') as f:" >> convert.py
-          echo "    reader = csv.DictReader(f)" >> convert.py
-          echo "    rows = list(reader)" >> convert.py
-          echo "with open('airports.json', 'w') as f:" >> convert.py
-          echo "    json.dump(rows, f, indent=2)" >> convert.py
+          echo 'import csv, json' > convert.py
+          echo 'with open("data.csv") as f:' >> convert.py
+          echo '    reader = csv.DictReader(f)' >> convert.py
+          echo '    rows = list(reader)' >> convert.py
+          echo 'with open("airports.json", "w") as f:' >> convert.py
+          echo '    json.dump(rows, f, indent=2)' >> convert.py
           python3 convert.py
 
-      - name: Commit and push
+      - name: Commit JSON
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add airports.json
-          git commit -m "Update airports.json" || echo "No changes to commit"
+          git commit -m "Update airports.json" || echo "No changes"
           git push
