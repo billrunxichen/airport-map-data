@@ -2,33 +2,35 @@ name: Update airports.json from Google Sheet
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  # Runs every 30 minutes
+    - cron: "*/30 * * * *"  # every 30 minutes
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Fetch Google Sheet and convert to JSON
         run: |
-          curl -L "https://docs.google.com/spreadsheets/d/1_C3dl1l7AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
-          mkdir -p json
-          python3 - <<EOF
-          import csv, json
-          with open('data.csv') as f:
-              reader = csv.DictReader(f)
-              rows = list(reader)
-          with open('json/airports.json', 'w') as f:
-              json.dump(rows, f, indent=2)
-          EOF
+          curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
+          python3 <<EOF
+import csv, json
+with open('data.csv') as f:
+    reader = csv.DictReader(f)
+    rows = list(reader)
+with open('airports.json', 'w') as f:
+    json.dump(rows, f, indent=2)
+EOF
 
       - name: Commit and push
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add json/airports.json
-          git commit -m "Automated update from Google Sheet"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add airports.json
+          git commit -m "Update airports.json"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
