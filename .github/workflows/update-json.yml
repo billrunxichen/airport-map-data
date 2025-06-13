@@ -2,15 +2,19 @@ name: Update JSON
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/30 * * * *"  # every 30 minutes
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout the repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # Necessary to push back to repo
+          fetch-depth: 0             # Needed for git push to work properly
 
       - name: Download Google Sheet as CSV
         run: curl -L "https://docs.google.com/spreadsheets/d/1_C3d1l17AdGDFNAzdtCJZgRsf_EaII_x8275ggrRmoA/gviz/tq?tqx=out:csv" -o data.csv
@@ -25,14 +29,10 @@ jobs:
           echo '    json.dump(rows, f, indent=2)' >> convert.py
           python3 convert.py
 
-      - name: Add .nojekyll to bypass Jekyll processing
-        run: touch .nojekyll
-
       - name: Commit and push
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add airports.json .nojekyll
-          git commit -m "Update airports.json" || echo "No changes"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add airports.json
+          git commit -m "Update airports.json" || echo "No changes to commit"
           git push
-
